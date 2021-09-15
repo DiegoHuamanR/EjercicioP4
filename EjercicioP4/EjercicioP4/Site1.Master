@@ -1,0 +1,100 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="EjercicioP4.Site1" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Venpra</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        
+    </asp:ContentPlaceHolder>
+    <link href="styles/master.css" rel="stylesheet" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+        .auto-style1 {
+            height: 38px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div id="navbar">
+                <ul>
+                    <li><a href="Default.aspx">Inicio</a></li>
+                    <li><a href="Nosotros.aspx">Nosotros</a></li>
+                    <li><a href="Servicios.aspx">Servicios</a></li>
+                    <li><a href="Galeria.aspx">Galería</a></li>
+                    <li><a href="Contacto.aspx">Contacto</a></li>
+                </ul>
+            </div>
+            </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">       
+            </asp:ContentPlaceHolder>
+          <div>
+               <br><br><br>
+              <asp:Label ID="titulo" runat="server" Text="Bienvenido a VENPRA"></asp:Label>
+              <br>
+                   <asp:DropDownList ID="objetos" runat="server" >
+                    <asp:ListItem Value="5">Cocina</asp:ListItem>
+                    <asp:ListItem Value="10">Lavadora</asp:ListItem>
+                    <asp:ListItem Value="15">Plancha</asp:ListItem>
+                </asp:DropDownList>
+                 <asp:Button ID="Button1" runat="server" Text="Seleccionar" OnClick="Button1_Click" style="height: 26px" /> 
+               <br />
+               <asp:Label ID="s1" runat="server"></asp:Label>
+               <br />       
+        <div class="container">
+            <table class="table" id="datos" runat="server">
+                <thead>
+                    <tr> 
+                        <th class="auto-style1">Codigo</th>
+                        <th class="auto-style1">Nombre</th>
+                        <th class="auto-style1">Descripción</th>
+                        <th class="auto-style1">Marca</th>
+                        <th class="auto-style1">Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <asp:Label ID="codigo" runat="server"></asp:Label>
+                        </td>
+                        <td >
+                            <asp:Label ID="nombre" runat="server"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:Label ID="descripcion" runat="server"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:Label ID="marca" runat="server"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:Label ID="precio" runat="server"></asp:Label>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+              <br>
+              <img id="grafico" class="circular--portrait" runat="server"/>
+
+         <div id="footer">
+                <span>72468973@ucsm.edu.pe</span>
+                <span>Numero de Contacto +51 965718977</span>
+                <span>www.venpra.com</span>
+        </div>
+                
+               
+
+    </form>
+</body>
+</html>
